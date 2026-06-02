@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "modifyHeaders",
+      "requestHeaders": [
+        { "header": "Origin", "operation": "remove" },
+        { "header": "Sec-Fetch-Site", "operation": "set", "value": "same-origin" },
+        { "header": "Sec-Fetch-Mode", "operation": "set", "value": "navigate" },
+        { "header": "Sec-Fetch-Dest", "operation": "set", "value": "empty" },
+        { "header": "Referer", "operation": "set", "value": "https://tixcraft.com/" }
+      ]
+    },
+    "condition": {
+      "urlFilter": "*://tixcraft.com/*",
+      "resourceTypes": ["xmlhttprequest"]
+    }
+  }
+]

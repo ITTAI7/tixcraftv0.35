@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "拓元售票餘票查詢器",
+  "version": "1.0",
+  "description": "作為擴充功能直接讀取拓元網頁資料，避開伺服器防護機制。",
+  "permissions": [
+    "declarativeNetRequest",
+    "scripting",
+    "tabs"
+  ],
+  "host_permissions": [
+    "https://tixcraft.com/*"
+  ],
+  "declarative_net_request": {
+    "rule_resources": [
+      {
+        "id": "ruleset_1",
+        "enabled": true,
+        "path": "rules.json"
+      }
+    ]
+  },
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "拓元剩餘票券查詢器"
+  }
+}

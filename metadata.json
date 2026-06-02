@@ -1,0 +1,6 @@
+{
+  "name": "拓元售票分析與餘票計算工具",
+  "description": "貼上拓元網頁座位區 HTML 原始碼，即時分析各區剩餘票數與推算已售出的票數。",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

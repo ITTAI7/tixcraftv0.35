@@ -1,11 +1,34 @@
-<div align="center">
+# 五月天 [ #5525+2 回到那一天 ] 25週年｜台北站 - 餘票查詢 (Tixcraft Ticket Remaining Tool)
 
-<img width="1200" height="475" alt="GHBanner" src="https://github.com/user-attachments/assets/0aa67016-6eaf-458a-adb2-6e31a0763ed6" />
+這是一個可以幫助您快速查詢拓元售票系統 (Tixcraft) 各場次剩餘票數與已售出票數的 Chrome 擴充功能 (Extension)。透過擴充功能的權限，能夠避開部分的防護機制，讓您輕鬆掌握所有的餘票狀態，並將「尚有餘票的區域」匯出成 CSV 檔案。
 
-  <h1>Built with AI Studio</h2>
+## 🌟 主要功能
 
-  <p>The fastest path from prompt to production with Gemini.</p>
+- **一覽所有場次狀況**：透過卡片式排版，不用頻繁捲動即可快速看清多個場次的售票狀態。
+- **一鍵全部更新**：提供「全部更新 (一鍵抓取)」功能，依次自動獲取各個場次的最新剩餘票數。
+- **已售出與剩餘票數推估**：可自行輸入預估的總人數 (Capacity)，系統將自動計算已售出的票數與總體售罄進度條。
+- **匯出餘票清單 (CSV)**：可以將包含「尚有餘票區域與對應剩餘票數」的資料匯出，方便您用 Excel 進行後續追蹤或搶票策略規劃。
 
-  <a href="https://aistudio.google.com/apps">Start building</a>
+## 🚀 如何安裝到你的 Chrome 瀏覽器
 
-</div>
+要在桌面版 Chrome 上安裝並使用它，請依照以下步驟操作：
+
+1. **下載專案**：在預覽畫面中，點擊右上角的「設定 (齒輪圖案)」，選擇 **Export to ZIP** 並將下載下來的檔案解壓縮。
+2. **打包專案**：在解壓縮的資料夾中，打開終端機 (Terminal / 命令提示字元 / PowerShell)，依序輸入下列指令：
+   ```bash
+   npm install   # 安裝需要的套件
+   npm run build # 編譯專案，產生擴充功能需要的檔案
+   ```
+   > 執行完畢後，資料夾內會多出一個名為 **`dist`** 的資料夾，這就是我們要匯入瀏覽器的擴充功能資料夾。
+3. **載入擴充功能**：
+   - 開啟 Google Chrome，在網址列輸入 `chrome://extensions/` 並進入。
+   - 將右上角的 **開發人員模式 (Developer mode)** 開關打開。
+   - 點擊左上角的 **載入未封裝項目 (Load unpacked)**。
+   - 在彈窗中，選擇剛才編譯產生的 **`dist`** 資料夾並按下確認。
+4. **準備就緒**：您現在可以在 Chrome 右上角的擴充功能拼圖圖示中找到「拓元售票餘票查詢器」，點擊即可開啟使用。
+
+## ⚠️ 注意事項
+
+- 請確保在使用本擴充功能的當下，您在其他分頁有成功打開過一次 [拓元售票網 (tixcraft.com)](https://tixcraft.com/) 並且狀態為已登入或已通過 Cloudflare 驗證機制。這能確保擴充功能順利發送請求。
+- 為避免觸發伺服器的請求頻率限制，「一鍵全部更新」功能會自動以間隔的方式抓取各場次資料。
+- 專案為供學習測試自動化腳本及擴充功能權限的實驗性工具。
